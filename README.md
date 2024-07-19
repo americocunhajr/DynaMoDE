@@ -1,6 +1,6 @@
-## Suite for Nonlinear Analysis of Energy Harvesting Systems
+## Dynamic Mode Decomposition Engine
 
-**STONEHENGE - Suite for Nonlinear Analysis of Energy Harvesting Systems** is an ensemble of easy-to-run Matlab and C++ codes for the nonlinear dynamic analysis of vibration energy harvesting systems. It encompasses several tools to simulate, optimize, control, and visualize their dynamics, providing a broad and robust framework for numerical experimentation.
+**DynaMoDE - Dynamic Mode Decomposition Engine** is an ensemble of ...
 
 <p align="center">
 <img src="logo/STONEHENGE-Modules.png" width="60%">
@@ -21,7 +21,7 @@
 - [References using STONEHENGE](#references-using-stonehenge)
 
 ### Overview
-**STONEHENGE** was developed to conduct nonlinear analysis on bistable piezoelectric-magneto-elastic energy harvesters. The code functionalities are reported in the following publication:
+**DynaMoDE** was developed to ...
 - **J. P. Norenberg, J. V. L. L. Peterson, V. G. Lopes, R. Luo, L. de la Roca, M. Pereira, J. G. Telles Ribeiro, A. Cunha Jr**, *STONEHENGE - Suite for Nonlinear Analysis of Energy Harvesting Systems*, Software Impacts, vol. 10, pp. 100161, 2021. <a href="http://dx.doi.org/10.1016/j.simpa.2021.100161" target="_blank">DOI</a>
 
 ### Features
@@ -31,7 +31,7 @@
 - Fully reproducible simulations
 
 ### Usage
-To get started with **STONEHENGE**, follow these steps:
+To get started with **DynaMoDE**, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/americocunhajr/STONEHENGE.git
@@ -41,43 +41,38 @@ To get started with **STONEHENGE**, follow these steps:
    cd STONEHENGE/STONEHENGE-1.0
    ```
 
-**STONEHENGE** can be used to simulate, optimize, control, and visualize the dynamics of bistable piezoelectric-magneto-elastic energy harvesters. Detailed usage instructions and examples are provided within the code comments and the provided documentation.
+**DynaMoDE** can be used to simulate, optimize, control, and visualize the dynamics of bistable piezoelectric-magneto-elastic energy harvesters. Detailed usage instructions and examples are provided within the code comments and the provided documentation.
 
 ### Documentation
-The routines in **STONEHENGE** are well-commented to explain their functionality. Each routine includes a description of its purpose, as well as inputs and outputs. Detailed documentation can be found within the code comments. An user-manual is available showing the package functionalities.
+The routines in **DynaMoDE** are well-commented to explain their functionality. Each routine includes a description of its purpose, as well as inputs and outputs. Detailed documentation can be found within the code comments. An user-manual is available showing the package functionalities.
 
 ### Reproducibility
-Simulations done with **STONEHENGE** are fully reproducible. You can find a fully reproducible capsule of the simulations on <a href="https://codeocean.com/capsule/4891890/tree/v1" target="_blank">CodeOcean</a>.
+Simulations done with **DynaMoDE** are fully reproducible. You can find a fully reproducible capsule of the simulations on <a href="https://codeocean.com/capsule/4891890/tree/v1" target="_blank">CodeOcean</a>.
 
 ### Authors
-- João Pedro C. V. Norenberg
-- João Victor L. L. Peterson
-- Vinicius G. Lopes
-- Roberto Luo
-- Leonardo de la Roca
-- Marcelo Pereira
-- José Geraldo Telles Ribeiro
+- Lucas Simon Araújo
+- Samuel da Silva
 - Americo Cunha Jr
 
-### Citing STONEHENGE
-If you use **STONEHENGE** in your research, please cite the following publication:
+### Citing DynaMoDE
+If you use **DynaMoDE** in your research, please cite the following publication:
 - *J. P. Norenberg, J. V. L. L. Peterson, V. G. Lopes, R. Luo, L. de la Roca, M. Pereira, J. G. Telles Ribeiro, A. Cunha Jr, STONEHENGE - Suite for Nonlinear Analysis of Energy Harvesting Systems, Software Impacts, 10:100161, 2021 http://dx.doi.org/10.1016/j.simpa.2021.100161*
 
 ```
-@article{STONEHENGE2021,
-   author       = {J. P. Norenberg and J. V. L. L. Peterson and V. G. Lopes and R. Luo and L. de la Roca and M. Pereira and J. G. {Telles Ribeiro} and A. Cunha Jr},
-   title        = { {STONEHENGE} - {S}uite for {N}onlinear {A}nalysis of {E}nergy {H}arvesting {S}ystems},
-   year         = {2021},
-   journal      = {Software Impacts},
-   volume.      = {10},
-   pages        = {100161},
-   note         = {10.1016/j.simpa.2021.100161},
+@article{DynaMoDE2024,
+   author       = "{L. S. Ara\'{u}jo and S. {da Silva} and A. {Cunha~Jr}}",
+   title        = {~},
+   year         = {2024},
+   journal      = {~},
+   volume.      = {~},
+   pages        = {~},
+   note         = {~},
 }
 ```
 
 ### License
 
-**STONEHENGE** is released under the MIT license. See the LICENSE file for details. All new contributions must be made under the MIT license.
+**DynaMoDE** is released under the MIT license. See the LICENSE file for details. All new contributions must be made under the MIT license.
 
 <img src="logo/mit_license_red.png" width="10%"> 
 
@@ -96,7 +91,7 @@ For any questions or further information, please contact the authors at:
 - Americo Cunha Jr: americo.cunha@uerj.br
 
 ### References using STONEHENGE
-The following references used **STONEHENGE** to obtain their results. If you want to see your publication listed here, please contact us.
+The following references used **DynaMoDE** to obtain their results. If you want to see your publication listed here, please contact us.
 
 - **J. P. Norenberg, and A. Cunha Jr**, *Vibration mitigation and energy harvesting with bistable resonators in metamaterial beams*, In: 27th International Congress on Mechanical Engineering (COBEM 2023), Florianópolis. Proceedings of COBEM 2023, 2023.
 
