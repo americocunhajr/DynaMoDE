@@ -1,9 +1,10 @@
 ## Dynamic Mode Decomposition Engine
 
-**DynaMoDE - Dynamic Mode Decomposition Engine** is an ensemble of ...
+**DynaMoDE - Dynamic Mode Decomposition Engine** is a modular framework for data-driven analysis and reduced-order modeling of dynamical systems based on Dynamic Mode Decomposition (DMD) and Koopman operator theory.
+
 
 <p align="center">
-<img src="logo/STONEHENGE-Modules.png" width="60%">
+<img src="logo/DynaMoDE-framework.png" width="60%">
 </p>
 
 ### Table of Contents
@@ -20,33 +21,46 @@
 - [Contact](#contact)
 
 ### Overview
-**DynaMoDE** was developed to ...
-- **J. P. Norenberg, J. V. L. L. Peterson, V. G. Lopes, R. Luo, L. de la Roca, M. Pereira, J. G. Telles Ribeiro, A. Cunha Jr**, *STONEHENGE - Suite for Nonlinear Analysis of Energy Harvesting Systems*, Software Impacts, vol. 10, pp. 100161, 2021. <a href="http://dx.doi.org/10.1016/j.simpa.2021.100161" target="_blank">DOI</a>
+**DynaMoDE** was developed to support the analysis, reconstruction, and interpretation of complex dynamical systems from data, with emphasis on:
+- Dynamic Mode Decomposition (DMD)
+- Koopman operator approximation
+- Spatiotemporal pattern extraction
+- Reduced-order modeling from experimental or simulated data
+
+The framework is designed to bridge theoretical concepts and practical applications, including scenarios with noisy, sparse, or low-resolution measurements, such as those encountered in thermal systems and engineering experiments.
+
+This repository accompanies the development presented in:
+- *L. S. Araujo, S. da Silva, A. Cunha Jr., Foundations of Dynamic Mode Decomposition for Data-Driven Modeling*, 2026.
+- *M. E. P. Silva et al., Characterization of Thermal Systems from Noisy and Low-resolution Measurements Using DMD*, 2026.
 
 ### Features
-- Comprehensive nonlinear dynamic analysis of energy harvesting systems
-- Simulation, optimization, control, and visualization tools
-- Robust framework for numerical experimentation
-- Fully reproducible simulations
+- Data-driven identification of dynamical systems using DMD
+- Koopman-based modal decomposition and spectral analysis
+- Reconstruction and prediction of spatiotemporal fields
+- Handling of noisy, sparse, and low-resolution datasets
+- Singular value analysis and rank truncation strategies
+- MATLAB implementations for pedagogical and research use
+- Reproducible workflows aligned with published studies
 
 ### Usage
 To get started with **DynaMoDE**, follow these steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/americocunhajr/STONEHENGE.git
+   git clone https://github.com/americocunhajr/DynaMoDE.git
    ```
 2. Navigate to the package directory:
    ```bash
-   cd STONEHENGE/STONEHENGE-1.0
+   cd STONEHENGE/DynaMoDE-1.0
    ```
+3. Run the DMD scripts provided in the corresponding folders
 
-**DynaMoDE** can be used to simulate, optimize, control, and visualize the dynamics of bistable piezoelectric-magneto-elastic energy harvesters. Detailed usage instructions and examples are provided within the code comments and the provided documentation.
+The code includes examples of:
+- Synthetic benchmark datasets (e.g., Ackley and Rastrigin functions)
+- Experimental thermal data (sensor-based and image-based)
+- Reconstruction and truncation analysis
 
 ### Documentation
-The routines in **DynaMoDE** are well-commented to explain their functionality. Each routine includes a description of its purpose, as well as inputs and outputs. Detailed documentation can be found within the code comments. An user-manual is available showing the package functionalities.
-
-### Reproducibility
-Simulations done with **DynaMoDE** are fully reproducible. You can find a fully reproducible capsule of the simulations on <a href="https://codeocean.com/capsule/4891890/tree/v1" target="_blank">CodeOcean</a>.
+The routines in **DynaMoDE** are well-commented to explain their functionality. Each routine includes a description of its purpose, as well as inputs and outputs. Detailed documentation can be found within the code comments.
 
 ### Authors
 - Lucas Simon Araújo
@@ -55,17 +69,17 @@ Simulations done with **DynaMoDE** are fully reproducible. You can find a fully 
 
 ### Citing DynaMoDE
 If you use **DynaMoDE** in your research, please cite the following publication:
-- *J. P. Norenberg, J. V. L. L. Peterson, V. G. Lopes, R. Luo, L. de la Roca, M. Pereira, J. G. Telles Ribeiro, A. Cunha Jr, STONEHENGE - Suite for Nonlinear Analysis of Energy Harvesting Systems, Software Impacts, 10:100161, 2021 http://dx.doi.org/10.1016/j.simpa.2021.100161*
+- *L. S. Araujo, S. da Silva, A. Cunha Jr., Foundations of Dynamic Mode Decomposition for Data-Driven Modeling*, 2026.
 
 ```
-@article{DynaMoDE2024,
-   author       = "{L. S. Ara\'{u}jo and S. {da Silva} and A. {Cunha~Jr}}",
-   title        = {~},
-   year         = {2024},
-   journal      = {~},
-   volume.      = {~},
-   pages        = {~},
-   note         = {~},
+@incollection{DynaMoDE2026,
+  author    = {L. S. Ara{\'u}jo and S. da Silva and A. Cunha Jr},
+  title     = {Dynamic Mode Decomposition for Data-Driven Modeling},
+  booktitle = {Scientific Machine Learning for Predictive Modeling: Bridging Data-Driven and Physics-Based Approaches in Computational Science and Engineering},
+  editor    = {Americo Cunha Jr and F. P. Santos and F. A. Rochinha and A. L. G . A. Coutinho},
+  publisher = {Springer},
+  year      = {2026},
+  address   = {Cham},
 }
 ```
 
@@ -81,7 +95,7 @@ If you use **DynaMoDE** in your research, please cite the following publication:
 
 ### Funding
 
-<img src="logo/faperj.png" width="20%"> &nbsp; &nbsp; <img src="logo/cnpq.png" width="20%"> &nbsp; &nbsp; <img src="logo/capes.png" width="10%">
+<img src="logo/faperj.png" width="20%"> &nbsp; &nbsp; <img src="logo/fapesp.png" width="20%"> &nbsp; &nbsp; <img src="logo/cnpq.png" width="20%"> &nbsp; &nbsp; <img src="logo/capes.png" width="10%">
 
 ### Contact
 For any questions or further information, please contact the third author at:
