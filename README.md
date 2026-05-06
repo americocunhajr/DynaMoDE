@@ -30,8 +30,8 @@
 The framework is designed to bridge theoretical concepts and practical applications, including scenarios with noisy, sparse, or low-resolution measurements, such as those encountered in thermal systems and engineering experiments.
 
 This repository accompanies the development presented in:
-- *L. S. Araujo, S. da Silva, A. Cunha Jr., Foundations of Dynamic Mode Decomposition for Data-Driven Modeling*, 2026.
-- *M. E. P. Silva et al., Characterization of Thermal Systems from Noisy and Low-resolution Measurements Using DMD*, 2026.
+- *L. S. Araújo, S. da Silva, A. Cunha Jr.*, Foundations of Dynamic Mode Decomposition for Data-Driven Modeling. In: *Scientific Machine Learning for Predictive Modeling: Bridging Data-Driven and Physics-Based Approaches in Computational Science and Engineering*, edited by A. Cunha Jr, F. P. Santos, F. A. Rochinha, and A. L. G. A. Coutinho, Springer, 2026.
+- *M. E. P. Silva et al.*, Characterization of Thermal Systems from Noisy and Low-resolution Measurements Using DMD. In: *Scientific Machine Learning for Predictive Modeling: Bridging Data-Driven and Physics-Based Approaches in Computational Science and Engineering*, edited by A. Cunha Jr, F. P. Santos, F. A. Rochinha, and A. L. G. A. Coutinho, Springer, 2026.
 
 ### Features
 - Data-driven identification of dynamical systems using DMD
@@ -69,7 +69,7 @@ The routines in **DynaMoDE** are well-commented to explain their functionality. 
 
 ### Citing DynaMoDE
 If you use **DynaMoDE** in your research, please cite the following publication:
-- *L. S. Araujo, S. da Silva, A. Cunha Jr., Foundations of Dynamic Mode Decomposition for Data-Driven Modeling*, 2026.
+- *L. S. Araújo, S. da Silva, A. Cunha Jr.*, Foundations of Dynamic Mode Decomposition for Data-Driven Modeling. In: *Scientific Machine Learning for Predictive Modeling: Bridging Data-Driven and Physics-Based Approaches in Computational Science and Engineering*, edited by A. Cunha Jr, F. P. Santos, F. A. Rochinha, and A. L. G. A. Coutinho, Springer, 2026.
 
 ```
 @incollection{DynaMoDE2026,
