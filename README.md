@@ -63,6 +63,8 @@ The routines in **DynaMoDE** are well-commented to explain their functionality. 
 
 ### Authors
 - Lucas Simon Araújo
+- Maria Eduarda P. Silva
+- Fernanda Thais Colombo
 - Samuel da Silva
 - Americo Cunha Jr
 
