@@ -49,7 +49,7 @@ To get started with **DynaMoDE**, follow these steps:
    ```
 2. Navigate to the package directory:
    ```bash
-   cd STONEHENGE/DynaMoDE-1.0
+   cd DynaMoDE/DynaMoDE-1.0
    ```
 3. Run the DMD scripts provided in the corresponding folders
 
