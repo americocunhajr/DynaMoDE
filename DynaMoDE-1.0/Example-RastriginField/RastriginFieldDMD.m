@@ -467,7 +467,8 @@ for j = 1:numel(selectedIndices)
     end
 end
 
-colormap(layout,turbo);
+%colormap(layout,turbo);
+colormap(layout.Parent, turbo);
 
 cb = colorbar;
 cb.Layout.Tile = 'east';
@@ -477,9 +478,9 @@ cb.Layout.Tile = 'east';
 % =================================================================
 
 makeGIF     = true;
-gifFile     = 'Rastrigin_Augmented_DMD.gif';
+gifFile     = 'Rastrigin_DMD.gif';
 gifDelay    = 0.06;
-frameStride = 2;
+frameStride = 10;
 
 if makeGIF
 
@@ -599,6 +600,112 @@ if makeGIF
         fullfile(pwd,gifFile));
 end
 
+
+% ================================================================
+% 21. DMD MODES FOR DYNAMICAL DIAGNOSIS
+% =================================================================
+
+PhiField = Phi(1:nField,:);
+
+% Continuous-time eigenvalues:
+%
+%       omega_j = log(lambda_j)/dt
+%
+% Re(omega_j): growth/decay rate
+% Im(omega_j): angular frequency
+
+omega = log(lambdaModel)/dt;
+
+growthRate       = real(omega);
+angularFrequency = imag(omega);
+frequency        = angularFrequency/(2*pi);
+
+% Modal importance for the physical field.
+modeImportance = abs(b(:)).*vecnorm(PhiField,2,1).';
+
+% Sort from most to least influential.
+[~,modeOrder] = sort(modeImportance,'descend');
+
+numberOfModesToPlot = min(6,numel(lambdaModel));
+selectedModes = modeOrder(1:numberOfModesToPlot);
+
+% Normalize each mode independently for visualization.
+modeMaximum = zeros(numberOfModesToPlot,1);
+
+for j = 1:numberOfModesToPlot
+    modeMaximum(j) = max(abs(PhiField(:,selectedModes(j))));
+end
+
+figure( ...
+    'Color','w', ...
+    'Position',[50 60 1450 720]);
+
+set(gcf,'Color','none');
+
+nColumns = 3;
+nRows = ceil(numberOfModesToPlot/nColumns);
+
+layoutModes = tiledlayout( ...
+    nRows,nColumns, ...
+    'Padding','compact', ...
+    'TileSpacing','compact');
+
+for j = 1:numberOfModesToPlot
+
+    modeIndex = selectedModes(j);
+
+    % Real part is generally the clearest spatial representation.
+    spatialMode = reshape( ...
+        real(PhiField(:,modeIndex)), ...
+        ny,nx);
+
+    nexttile;
+
+    contourf( ...
+        x1,x2,spatialMode,50, ...
+        'LineColor','none');
+
+    axis image;
+    box on;
+
+    % Symmetric limits are essential for signed modes.
+    modeLimit = max(abs(spatialMode),[],'all');
+
+    if modeLimit > eps
+        clim([-modeLimit modeLimit]);
+    end
+
+    title( ...
+        { ...
+        sprintf('Mode %d',modeIndex), ...
+        sprintf('\\lambda = %.4f %+.4fi', ...
+            real(lambdaModel(modeIndex)), ...
+            imag(lambdaModel(modeIndex))), ...
+        sprintf('f = %.4f,  growth = %.3e', ...
+            abs(frequency(modeIndex)), ...
+            growthRate(modeIndex)) ...
+        }, ...
+        'Interpreter','tex', ...
+        'FontSize',12);
+
+    xlabel('x_1');
+
+    if mod(j-1,nColumns) == 0
+        ylabel('x_2');
+    end
+
+    set(gca,'FontSize',12);
+end
+
+% A diverging colormap is preferable for signed modal structures.
+colormap(layoutModes.Parent,blueWhiteRedMap(256));
+
+title( ...
+    layoutModes, ...
+    'Dominant DMD Modes: Spatial Structures and Temporal Signatures', ...
+    'FontSize',18, ...
+    'FontWeight','bold');
+
 % ================================================================
 % LOCAL FUNCTION
 % =================================================================
@@ -646,4 +753,28 @@ function dQdt = temporalDerivative(Q,dt)
         - 4*Q(:,nTimes-1) ...
         + Q(:,nTimes-2) ...
         )/(2*dt);
+end
+
+
+function cmap = blueWhiteRedMap(nColors)
+%BLUEWHITEREDMAP Diverging blue-white-red colormap.
+
+if nargin < 1
+    nColors = 256;
+end
+
+nLower = floor(nColors/2);
+nUpper = nColors-nLower;
+
+blueToWhite = [ ...
+    linspace(0,1,nLower).', ...
+    linspace(0,1,nLower).', ...
+    ones(nLower,1)];
+
+whiteToRed = [ ...
+    ones(nUpper,1), ...
+    linspace(1,0,nUpper).', ...
+    linspace(1,0,nUpper).'];
+
+cmap = [blueToWhite; whiteToRed];
 end
