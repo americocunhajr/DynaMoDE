@@ -70,9 +70,9 @@ The routines in **DynaMoDE** are well-commented to explain their functionality. 
 
 ### Citing DynaMoDE
 If you use **DynaMoDE** in your research, please cite the following publication:
-- *L. S. Araújo, S. da Silva, A. Cunha Jr.*, Foundations of Dynamic Mode Decomposition for Data-Driven Modeling. In: *Scientific Machine Learning for Predictive Modeling: Bridging Data-Driven and Physics-Based Approaches in Computational Science and Engineering*, edited by A. Cunha Jr, F. P. Santos, F. A. Rochinha, and A. L. G. A. Coutinho, Springer, 2026.
+> *L. S. Araújo, S. da Silva, A. Cunha Jr.*, Foundations of Dynamic Mode Decomposition for Data-Driven Modeling. In: *Scientific Machine Learning for Predictive Modeling: Bridging Data-Driven and Physics-Based Approaches in Computational Science and Engineering*, edited by A. Cunha Jr, F. P. Santos, F. A. Rochinha, and A. L. G. A. Coutinho, Springer, 2026.
 
-```
+```bibtex
 @incollection{DynaMoDE2026,
   author    = {L. S. Ara{\'u}jo and S. da Silva and A. Cunha Jr},
   title     = {Dynamic Mode Decomposition for Data-Driven Modeling},
