@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use DynaMoDE in research, consult the publication citation in the repository README."
+title: "DynaMoDE — Dynamic Mode Decomposition Engine"
+type: software
+repository-code: "https://github.com/americocunhajr/DynaMoDE"
+url: "https://dmdcode.org/"
+license: MIT
+authors:
+  - family-names: "Araújo"
+    given-names: "Lucas Simon"
+  - family-names: "Silva"
+    given-names: "Maria Eduarda P."
+  - family-names: "Colombo"
+    given-names: "Fernanda Thais"
+  - family-names: "da Silva"
+    given-names: "Samuel"
+  - family-names: "Cunha Jr"
+    given-names: "Americo"

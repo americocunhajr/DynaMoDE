@@ -7,3 +7,13 @@ highlighter: rouge
 
 kramdown:
   syntax_highlighter: rouge
+
+# Canonical site metadata and GitHub Pages SEO plugins
+title: "DynaMoDE — Dynamic Mode Decomposition Software"
+description: "Open-source MATLAB Dynamic Mode Decomposition software for Koopman-related modal analysis, spatiotemporal reconstruction, prediction, and thermal and video data."
+url: "https://dmdcode.org"
+lang: en
+image: /logo/DynaMoDE.png
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

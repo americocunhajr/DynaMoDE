@@ -41,6 +41,10 @@ This repository accompanies the development presented in:
 - MATLAB implementations for pedagogical and research use
 - Reproducible workflows aligned with published studies
 
+### Examples and methods
+
+The [DynaMoDE examples and methods catalogue](https://dmdcode.org/examples/) provides an overview of the MATLAB workflows and links directly to the relevant source files.
+
 ### Usage
 To get started with **DynaMoDE**, follow these steps:
 1. Clone the repository:
